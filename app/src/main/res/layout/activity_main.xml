@@ -2,44 +2,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inputPsw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/sign"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="110dp"
         android:layout_weight="1"
-        android:text="Sign up" />
+        android:text="Sign up"
+        android:textSize="42sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+        <LinearLayout
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="?attr/dividerVertical"
+            android:dividerPadding="10dp"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/nameImg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:ems="10"
+                android:text="Name" />
+        </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="12dp"
         android:layout_weight="1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:divider="?attr/dividerVertical"
+        android:dividerPadding="10dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:layout_marginBottom="70dp">
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="64dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <ImageView
+            android:id="@+id/psdImg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="password"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="25dp"
         android:layout_weight="1"
         android:text="Button" />
 
@@ -47,29 +87,35 @@
         android:id="@+id/orItem"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
 
-        <TextView
+         <TextView
             android:id="@+id/lineLeft"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
             android:layout_weight="2"
-            android:text="TextView" />
+            android:background="@color/black"
+            android:alpha="0.4"/>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textAlignment="center"
             android:text="or" />
 
         <TextView
             android:id="@+id/lineRight"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
             android:layout_weight="2"
-            android:text="TextView" />
+            android:background="@color/black"
+            android:alpha="0.4"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -79,24 +125,45 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"/>
+
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             app:srcCompat="@mipmap/ic_launcher_round" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             app:srcCompat="@mipmap/ic_launcher" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"/>
+
     </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"/>
 
     <LinearLayout
         android:id="@+id/create"
@@ -110,6 +177,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginRight="2dp"
+            android:textAlignment="textEnd"
+            android:textSize="12dp"
             android:text="Do not have an account?" />
 
         <TextView
@@ -117,6 +187,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:textAlignment="textStart"
+            android:textSize="12dp"
+            android:textColor="@color/black"
             android:text="Create a new account" />
     </LinearLayout>
 
