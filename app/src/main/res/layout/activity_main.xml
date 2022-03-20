@@ -107,13 +107,14 @@
         app:cardElevation="4dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/signInBt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape"
             android:backgroundTint="#000000"
             android:text="Sign in"
             android:textColor="@color/white"
+            android:onClick="onClickButtonStart"
             app:rippleColor="@color/black" />
 
     </androidx.cardview.widget.CardView>
