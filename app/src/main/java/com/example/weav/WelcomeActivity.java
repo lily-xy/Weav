@@ -110,16 +110,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
             super.onDraw(canvas);
 
-            int height1 = getHeight() / 3;
-            int height2 = getHeight() / 9 * 5;
-            int difference = height2 - height1;
+            int difference = getHeight() / 14;
 
             for (int i = 0; i < sTriangles.length; i++) {
                 Bitmap bitmapST = sTriangles[i].bitmap;
                 sTriangles[i].locX = getWidth() / 10 * sTriangles[i].randomX;
                 sTriangles[i].locY = getHeight() / 30 * sTriangles[i].randomY;
 
-                if (sTriangles[i].locY > height1 && sTriangles[i].locY < height2) {
+                if (sTriangles[i].locY > getHeight() / 2) {
                     sTriangles[i].locY -= difference;
                 }
 
@@ -133,7 +131,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 hTriangles[j].locY = getHeight() / 30 * hTriangles[j].randomY;
 
 
-                if (hTriangles[j].locY > height1 && hTriangles[j].locY < height2) {
+                if (hTriangles[j].locY > getHeight() / 2) {
                     hTriangles[j].locY -= difference;
                 }
                 Rect hTDstRect = new Rect((int) (hTriangles[j].locX - hTriangles[j].radius), (int) (hTriangles[j].locY - hTriangles[j].radius), (int) (hTriangles[j].locX + hTriangles[j].radius), (int) (hTriangles[j].locY + hTriangles[j].radius));
