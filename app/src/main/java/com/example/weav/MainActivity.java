@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +18,68 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText inputName;
     private EditText inputPsw;
+
+    public class sTriangle {
+        public float speedX = 0;
+        public float speedY = 0;
+        private float locX;
+        private float locY;
+
+        Paint paint;
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.triangle1);
+
+        public sTriangle() {
+            this.paint = new Paint();
+        }
+
+        public float getlocX() {
+            return locX;
+        }
+
+        public void setlocX(float locX) {
+            this.locX = locX;
+        }
+
+        public float getlocY() {
+            return locY;
+        }
+
+        public void setlocY(float locY) {
+            this.locY = locY;
+        }
+
+    }
+
+    public class hTriangle {
+        public float speedX = 0;
+        public float speedY = 0;
+        private float locX;
+        private float locY;
+
+        Paint paint;
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.triangle2);
+
+        public hTriangle() {
+            this.paint = new Paint();
+        }
+
+        public float getlocX() {
+            return locX;
+        }
+
+        public void setlocX(float locX) {
+            this.locX = locX;
+        }
+
+        public float getlocY() {
+            return locY;
+        }
+
+        public void setlocY(float locY) {
+            this.locY = locY;
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
