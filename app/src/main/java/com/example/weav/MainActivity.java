@@ -3,6 +3,7 @@ package com.example.weav;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +15,6 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.Random;
@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
         public sTriangle() {
             this.paint = new Paint();
-            this.randomX = (double)(random.nextInt(5));
+            this.randomX = (double)(random.nextInt(10));
             this.randomY = (double)(random.nextInt(30));
-            this.radius = random.nextInt(40) + 20;
+            this.radius = random.nextInt(10) + 5;
         }
 
         public double getlocX() {
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         public hTriangle() {
             this.paint = new Paint();
-            this.randomX = (double)(random.nextInt(5));
+            this.randomX = (double)(random.nextInt(10));
             this.randomY = (double)(random.nextInt(30));
             this.radius = random.nextInt(40) + 20;
         }
@@ -114,21 +114,21 @@ public class MainActivity extends AppCompatActivity {
             super.onDraw(canvas);
 
            for(int i = 0; i < sTriangles.length; i++){
-                Bitmap bitmapsT = sTriangles[i].bitmap;
-                sTriangles[i].locX = getWidth() / 10 * (sTriangles[i].randomX + 1);
-                sTriangles[i].locY = getHeight() / 5 *  sTriangles[i].randomY / 10;
+                Bitmap bitmapST = sTriangles[i].bitmap;
+                sTriangles[i].locX = getWidth() / 10 * sTriangles[i].randomX;
+                sTriangles[i].locY = getHeight() / 30 *  sTriangles[i].randomY;
 
-                Rect stoneDstRect = new Rect((int)( sTriangles[i].locX -  sTriangles[i].radius), (int)( sTriangles[i].locY -  sTriangles[i].radius), (int)( sTriangles[i].locX +  sTriangles[i].radius), (int)( sTriangles[i].locY +  sTriangles[i].radius));
-                canvas.drawBitmap(bitmapsT, null, stoneDstRect,  sTriangles[i].paint);
+                Rect sTDstRect = new Rect((int)( sTriangles[i].locX -  sTriangles[i].radius), (int)( sTriangles[i].locY -  sTriangles[i].radius), (int)( sTriangles[i].locX +  sTriangles[i].radius), (int)( sTriangles[i].locY +  sTriangles[i].radius));
+                canvas.drawBitmap(bitmapST, null, sTDstRect,  sTriangles[i].paint);
             }
 
-            for(int i = 0; i < hTriangles.length; i++){
-                Bitmap bitmaphT = hTriangles[i].bitmap;
-                hTriangles[i].locX = getWidth() / 10 * (hTriangles[i].randomX + 1);
-                hTriangles[i].locY = getHeight() / 5 *  hTriangles[i].randomY / 10;
+            for(int j = 0; j < hTriangles.length; j++){
+                Bitmap bitmapHT = hTriangles[j].bitmap;
+                hTriangles[j].locX = getWidth() / 10 * hTriangles[j].randomX;
+                hTriangles[j].locY = getHeight() / 30 *  hTriangles[j].randomY;
 
-                Rect hTDstRect = new Rect((int)( hTriangles[i].locX -  hTriangles[i].radius), (int)( hTriangles[i].locY -  hTriangles[i].radius), (int)( hTriangles[i].locX +  hTriangles[i].radius), (int)( hTriangles[i].locY +  hTriangles[i].radius));
-                canvas.drawBitmap(bitmaphT, null, hTDstRect,  hTriangles[i].paint);
+                Rect hTDstRect = new Rect((int)( hTriangles[j].locX -  hTriangles[j].radius), (int)( hTriangles[j].locY -  hTriangles[j].radius), (int)( hTriangles[j].locX +  hTriangles[j].radius), (int)( hTriangles[j].locY +  hTriangles[j].radius));
+                canvas.drawBitmap(bitmapHT, null, hTDstRect,  hTriangles[j].paint);
             }
 
             invalidate();
@@ -142,6 +142,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ConstraintLayout root = findViewById(R.id.SignInView);
+        GraphicsView trianglesView = new GraphicsView(this);
+        root.addView(trianglesView);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -149,6 +153,13 @@ public class MainActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(uiOptions);
+
+        for (int i = 0; i < sTriangles.length; i++) {
+            sTriangles[i] = new sTriangle();
+        }
+        for (int j = 0; j < hTriangles.length; j++) {
+            hTriangles[j] = new hTriangle();
+        }
     }
 
     public void onClickButtonStart(View view) {
@@ -171,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, WelcomeActivity.class);
         intent.putExtra("userName", userName);
+
         startActivity(intent);
     }
 
