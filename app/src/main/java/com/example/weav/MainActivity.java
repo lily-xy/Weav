@@ -14,6 +14,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -173,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         for (int j = 0; j < hTriangles.length; j++) {
             hTriangles[j] = new hTriangle();
         }
+
     }
 
     public void onClickButtonStart(View view) {
@@ -182,11 +184,12 @@ public class MainActivity extends AppCompatActivity {
         String userName = inputName.getText().toString();
         String psw = inputPsw.getText().toString();
 
-
         if (userName.isEmpty()) {
             Toast.makeText(this, "Please input your name", Toast.LENGTH_LONG).show();
             return;
-        } else if (psw.isEmpty()){
+        }
+
+        if (psw.isEmpty()){
             Toast.makeText(this, "Please input your password", Toast.LENGTH_LONG).show();
             return;
         }
