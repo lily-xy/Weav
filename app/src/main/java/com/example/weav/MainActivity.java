@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -41,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         public sTriangle() {
             this.paint = new Paint();
-            this.randomX = (double)(random.nextInt(10));
-            this.randomY = (double)(random.nextInt(30));
-            this.radius = random.nextInt(10) + 5;
+            this.randomX = (double)(random.nextInt(11));
+            this.randomY = (double)(random.nextInt(31));
+            this.radius = random.nextInt(60) + 20;
         }
 
         public double getlocX() {
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             this.paint = new Paint();
             this.randomX = (double)(random.nextInt(10));
             this.randomY = (double)(random.nextInt(30));
-            this.radius = random.nextInt(40) + 20;
+            this.radius = random.nextInt(40) + 30;
         }
 
         public double getlocX() {
@@ -113,10 +114,18 @@ public class MainActivity extends AppCompatActivity {
 
             super.onDraw(canvas);
 
+            int height1 = getHeight() / 3;
+            int height2 = getHeight() / 9 * 5;
+            int difference = height2 - height1;
+
            for(int i = 0; i < sTriangles.length; i++){
                 Bitmap bitmapST = sTriangles[i].bitmap;
                 sTriangles[i].locX = getWidth() / 10 * sTriangles[i].randomX;
-                sTriangles[i].locY = getHeight() / 30 *  sTriangles[i].randomY;
+                sTriangles[i].locY = getHeight() / 30 * sTriangles[i].randomY;
+
+               if(sTriangles[i].locY > height1 && sTriangles[i].locY < height2){
+                    sTriangles[i].locY -= difference;
+                }
 
                 Rect sTDstRect = new Rect((int)( sTriangles[i].locX -  sTriangles[i].radius), (int)( sTriangles[i].locY -  sTriangles[i].radius), (int)( sTriangles[i].locX +  sTriangles[i].radius), (int)( sTriangles[i].locY +  sTriangles[i].radius));
                 canvas.drawBitmap(bitmapST, null, sTDstRect,  sTriangles[i].paint);
@@ -125,8 +134,12 @@ public class MainActivity extends AppCompatActivity {
             for(int j = 0; j < hTriangles.length; j++){
                 Bitmap bitmapHT = hTriangles[j].bitmap;
                 hTriangles[j].locX = getWidth() / 10 * hTriangles[j].randomX;
-                hTriangles[j].locY = getHeight() / 30 *  hTriangles[j].randomY;
+                hTriangles[j].locY = getHeight() / 30 * hTriangles[j].randomY;
 
+
+                if(hTriangles[j].locY > height1 && hTriangles[j].locY < height2){
+                    hTriangles[j].locY -= difference;
+                }
                 Rect hTDstRect = new Rect((int)( hTriangles[j].locX -  hTriangles[j].radius), (int)( hTriangles[j].locY -  hTriangles[j].radius), (int)( hTriangles[j].locX +  hTriangles[j].radius), (int)( hTriangles[j].locY +  hTriangles[j].radius));
                 canvas.drawBitmap(bitmapHT, null, hTDstRect,  hTriangles[j].paint);
             }
