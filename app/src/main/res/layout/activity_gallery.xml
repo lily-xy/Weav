@@ -140,7 +140,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_1" />
+                        app:srcCompat="@drawable/second_1" />
 
                     <ImageView
                         android:layout_width="0dp"
@@ -148,13 +148,13 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/first_2" />
+                        app:srcCompat="@drawable/second_2" />
 
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_3" />
+                        app:srcCompat="@drawable/second_3" />
 
                 </LinearLayout>
 
@@ -167,7 +167,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_1" />
+                        app:srcCompat="@drawable/third_1" />
 
                     <ImageView
                         android:layout_width="0dp"
@@ -175,13 +175,13 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/first_2" />
+                        app:srcCompat="@drawable/third_2" />
 
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_3" />
+                        app:srcCompat="@drawable/third_3" />
 
                 </LinearLayout>
 
@@ -196,7 +196,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_1" />
+                        app:srcCompat="@drawable/forth_1" />
 
                     <ImageView
                         android:layout_width="0dp"
@@ -204,13 +204,13 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/first_2" />
+                        app:srcCompat="@drawable/forth_2" />
 
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_3" />
+                        app:srcCompat="@drawable/forth_3" />
 
                 </LinearLayout>
 
@@ -223,7 +223,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_1" />
+                        app:srcCompat="@drawable/fifth_1" />
 
                     <ImageView
                         android:layout_width="0dp"
@@ -231,13 +231,13 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/first_2" />
+                        app:srcCompat="@drawable/fifth_2" />
 
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_3" />
+                        app:srcCompat="@drawable/fifth_3" />
 
                 </LinearLayout>
 
@@ -251,7 +251,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_1" />
+                        app:srcCompat="@drawable/six_1" />
 
                     <ImageView
                         android:layout_width="0dp"
@@ -259,13 +259,13 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/first_2" />
+                        app:srcCompat="@drawable/six_2" />
 
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/first_3" />
+                        app:srcCompat="@drawable/six_3" />
 
                 </LinearLayout>
 
