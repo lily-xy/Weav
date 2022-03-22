@@ -18,8 +18,8 @@
             android:id="@+id/view13"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.8"
-            android:layout_marginBottom="12dp"/>
+            android:layout_weight="1.5"
+            android:layout_marginBottom="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,6 +66,7 @@ want to make" />
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:alpha="1"
                 app:srcCompat="@drawable/ok_w" />
 
         </LinearLayout>
