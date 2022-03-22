@@ -181,25 +181,26 @@ public class MainActivity extends AppCompatActivity {
 
         inputName =(EditText) findViewById(R.id.editTextTextPersonName);
         inputPsw = (EditText) findViewById(R.id.Password);
+
         String userName = inputName.getText().toString();
         String psw = inputPsw.getText().toString();
-
-        if (userName.isEmpty()) {
-            Toast.makeText(this, "Please input your name", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        if (psw.isEmpty()){
-            Toast.makeText(this, "Please input your password", Toast.LENGTH_LONG).show();
-            return;
-        }
-        inputName.setText("");
-        inputPsw.setText("");
 
         Intent intent = new Intent(this, WelcomeActivity.class);
         intent.putExtra("userName", userName);
 
-        startActivity(intent);
+        System.out.println("Username: " + userName.isEmpty());
+        System.out.println("Password: " + psw.isEmpty());
+
+        if(userName.isEmpty()) {
+            Toast.makeText(this, "Please input your name", Toast.LENGTH_LONG).show();
+        } else if (psw.isEmpty()) {
+            Toast.makeText(this, "Please input your password", Toast.LENGTH_LONG).show();
+        } else {
+            startActivity(intent);
+        }
+
+        inputName.setText("");
+        inputPsw.setText("");
     }
 
 }

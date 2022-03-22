@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Weav">
-        <activity android:name=".DealActivity"></activity>
+        <activity android:name=".EffectActivity"></activity>
+        <activity android:name=".DealActivity" />
         <activity android:name=".SelectionActivity" />
         <activity android:name=".GalleryActivity" />
         <activity android:name=".WelcomeActivity" />
