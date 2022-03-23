@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Weav">
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".ContentActivity"></activity>
+        <activity android:name=".CameraActivity" />
         <activity android:name=".HueActivity" />
         <activity android:name=".EffectActivity" />
         <activity android:name=".DealActivity" />
