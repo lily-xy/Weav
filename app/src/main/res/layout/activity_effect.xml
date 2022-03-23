@@ -230,122 +230,111 @@
                             android:orientation="horizontal">
 
 
-                            <View
-                                android:id="@+id/view18"
-                                android:layout_width="0dp"
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c1"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c1" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c2" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c2"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c3" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c4" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c3"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c5" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c6" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c4"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c7" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c8" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c5"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c9" />
 
                             <View
-                                android:layout_width="0dp"
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c10" />
 
                             <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c6"/>
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"/>
 
-                            <View
-                                android:layout_width="0dp"
+                            <ImageView
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c7"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c8"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c9"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c10"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.05"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.28"
-                                android:background="@drawable/c11"/>
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/c11" />
                         </LinearLayout>
                     </HorizontalScrollView>
                 </LinearLayout>
