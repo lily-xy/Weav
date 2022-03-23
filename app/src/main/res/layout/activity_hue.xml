@@ -222,9 +222,10 @@
                     <HorizontalScrollView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="6">
+                        android:layout_weight="9">
 
                         <LinearLayout
+                            android:weightSum="100"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
@@ -240,7 +241,7 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="0.8"/>
 
                             <View
                                 android:layout_width="0dp"
@@ -251,7 +252,7 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="0.8"/>
 
                             <View
                                 android:layout_width="0dp"
@@ -262,7 +263,7 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="0.8"/>
 
                             <View
                                 android:layout_width="0dp"
@@ -273,7 +274,7 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="0.8"/>
 
                             <View
                                 android:layout_width="0dp"
@@ -284,7 +285,7 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="0.8"/>
 
                             <View
                                 android:layout_width="0dp"
@@ -295,7 +296,7 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="0.8"/>
 
                             <View
                                 android:layout_width="0dp"
