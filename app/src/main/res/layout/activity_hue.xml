@@ -318,15 +318,16 @@
         android:id="@+id/backgroundBlock"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.75"
         android:background="@color/black"
-        android:alpha="0.75" />
+        tools:visibility="invisible" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="40dp"
+        tools:visibility="invisible">
 
         <View
             android:layout_width="match_parent"
@@ -358,8 +359,8 @@
                         android:id="@+id/imageView17"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
                         app:srcCompat="@drawable/bibt" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -378,8 +379,8 @@
                             app:srcCompat="@drawable/bicolorbar" />
 
 
-
                         <LinearLayout
+                            android:id="@+id/state2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -392,22 +393,23 @@
                                 android:id="@+id/state2_white"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_marginRight="10dp"
+                                android:layout_weight="1"
                                 app:srcCompat="@drawable/mocolorbarwhite" />
 
                             <ImageView
                                 android:id="@+id/state2_red"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
                                 app:srcCompat="@drawable/mocolorbarred" />
 
                         </LinearLayout>
 
 
                         <LinearLayout
+                            android:id="@+id/state3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -420,16 +422,16 @@
                                 android:id="@+id/state3_white"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_marginRight="10dp"
+                                android:layout_weight="1"
                                 app:srcCompat="@drawable/state3whitebar" />
 
                             <ImageView
                                 android:id="@+id/state3_red"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
                                 app:srcCompat="@drawable/state3redbar" />
 
                         </LinearLayout>
@@ -446,8 +448,8 @@
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="10dp" />
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -459,25 +461,25 @@
                             android:id="@+id/MWhite"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:text="#FFFFFF"
+                            android:textColor="@color/thirdColor"
                             android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/thirdColor" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/MRed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginStart="10dp"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:text="#C73B22"
+                            android:textColor="@color/thirdColor"
                             android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/thirdColor" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -492,7 +494,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="8.5"
-                    app:srcCompat="@drawable/colorwheel" />
+                    app:srcCompat="@drawable/colorwheel1" />
 
                 <ImageView
                     android:id="@+id/imageView22"
@@ -508,17 +510,19 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/cancel_action"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:layout_marginRight="10dp"
+                        android:layout_weight="1"
                         app:srcCompat="@drawable/cancel" />
 
                     <ImageView
+                        android:id="@+id/okay_action"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
                         app:srcCompat="@drawable/colorwheelok" />
                 </LinearLayout>
 
