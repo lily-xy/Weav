@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Weav</string>
-    <string name="sentence">Choose the image &amp; Start to work</string>
     <string name="title_activity_deal">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -13,4 +12,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="sentence">Choose the image &amp; Start to work</string>
+    <string name="succeedSentence"> Already send the file to the connected printer</string>
 </resources>
