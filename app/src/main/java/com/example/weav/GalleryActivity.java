@@ -25,4 +25,15 @@ public class GalleryActivity extends AppCompatActivity {
         startActivity(intentCamera);
     }
 
+    public void onClickButtonWelcomePage(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
+
 }
