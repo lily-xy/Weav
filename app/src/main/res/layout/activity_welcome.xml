@@ -43,7 +43,7 @@
                         android:id="@+id/view7"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="7" />
+                        android:layout_weight="7.4" />
 
                     <ImageView
                         android:id="@+id/imageView"
@@ -55,7 +55,7 @@
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        android:layout_weight="0.6" />
 
                     <ImageView
                         android:id="@+id/imageView4"
