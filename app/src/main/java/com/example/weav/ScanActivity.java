@@ -22,7 +22,7 @@ public class ScanActivity extends AppCompatActivity {
 
     public class scanLine {
         int vX = 0;
-        int vY = 5;
+        int vY = 20;
         private float locX;
         private float locY;
 
@@ -94,6 +94,11 @@ public class ScanActivity extends AppCompatActivity {
         ConstraintLayout root = findViewById(R.id.scanView);
         GraphicsView lineView = new GraphicsView(this);
         root.addView(lineView);
+
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        getWindow().getDecorView().setSystemUiVisibility(uiOptions);
 
         line = new scanLine();
     }
