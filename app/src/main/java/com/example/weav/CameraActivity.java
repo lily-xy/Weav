@@ -1,10 +1,12 @@
 package com.example.weav;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class CameraActivity extends AppCompatActivity {
 
@@ -23,6 +25,18 @@ public class CameraActivity extends AppCompatActivity {
         intentGallery.putExtra("userName", userName);
 
         startActivity(intentGallery);
+    }
+
+    public void onClickChangeView(View view) {
+
+        ConstraintLayout root = findViewById(R.id.takePhotoView);
+
+        if(root.getBackground() == getDrawable(R.drawable.camerabg)){
+            root.setBackgroundResource(R.drawable.selfimage2);
+        }
+        else {
+            root.setBackgroundResource(R.drawable.camerabg);
+        }
     }
 
 }
