@@ -11,4 +11,5 @@
     <color name="lightBackground">#F4F4F4</color>
     <color name="thirdColor">#FF000000</color>
     <color name="forthColor">#707070</color>
+    <color name="primaryColor">#F024F0</color>
 </resources>
