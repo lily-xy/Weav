@@ -108,7 +108,7 @@ public class ScanActivity extends AppCompatActivity {
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
 
-        Intent intent = new Intent(this, DealActivity.class);
+        Intent intent = new Intent(this, SelectionActivity.class);
         intent.putExtra("userName", userName);
 
         startActivity(intent);
