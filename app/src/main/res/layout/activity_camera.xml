@@ -5,19 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/takePhotoView"
+    android:background="@drawable/camerabg"
+    android:tag="back"
     tools:context=".CameraActivity">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/imageView30"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:tag="back"
-            android:src="@drawable/camerabg" />
-    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
