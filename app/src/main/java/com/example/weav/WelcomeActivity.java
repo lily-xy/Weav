@@ -169,11 +169,10 @@ public class WelcomeActivity extends AppCompatActivity {
         }
     }
 
-    Intent getIntent = getIntent();
-    String userName = getIntent.getStringExtra("userName");
-
-
     public void onClickButtonTakePhoto(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
 
         Intent intentCamera = new Intent(this, CameraActivity.class);
         intentCamera.putExtra("userName", userName);
@@ -182,6 +181,9 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onClickButtonGallery(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
 
         Intent intentGallery = new Intent(this, GalleryActivity.class);
         intentGallery.putExtra("userName", userName);
