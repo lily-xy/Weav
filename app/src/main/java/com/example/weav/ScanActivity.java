@@ -55,28 +55,32 @@ public class ScanActivity extends AppCompatActivity {
 
     public class GraphicsView extends View {
 
+        boolean reach = false;
+
         public GraphicsView(Context context) {
             super(context);
             line = new scanLine();
         }
-
 
         public void isReach(){
             float reachHeight = getHeight()/6*5;
 
             if(line.getlocY() >= reachHeight)
                 line.vY = -line.vY;
-
-            if (line.getlocY() < 100)
-                jumpNext(this);
-            }
+        }
 
         public void onDraw(Canvas canvas) {
 
             super.onDraw(canvas);
 
             isReach();
+            if(line.getlocY() < 200){
+                jumpNext(this);
+            }
+
             line.locY += line.vY;
+            line.setlocY(line.locY);
+            System.out.println(line.getlocY());
             canvas.drawLine(line.getlocX(), line.getlocY(), getWidth() - line.getlocX(), line.getlocY()+10, line.paint);
 
             invalidate();
