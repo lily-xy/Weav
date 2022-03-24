@@ -116,6 +116,7 @@
                         app:srcCompat="@drawable/first_1" />
 
                     <ImageView
+                        android:id="@+id/bird_Img"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -258,9 +259,9 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
                         app:srcCompat="@drawable/six_2" />
 
                     <ImageView
@@ -285,14 +286,23 @@
                 android:id="@+id/imageButton"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 app:srcCompat="@drawable/galleries" />
 
             <View
                 android:id="@+id/view12"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2" />
+                android:layout_weight="3" />
+
+            <ImageView
+                android:id="@+id/continuebt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:srcCompat="@drawable/resource_continue"
+                tools:visibility="invisible" />
         </LinearLayout>
 
         <View

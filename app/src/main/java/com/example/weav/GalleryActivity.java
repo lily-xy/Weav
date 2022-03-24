@@ -36,4 +36,6 @@ public class GalleryActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
 }
