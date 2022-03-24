@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -13,6 +14,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -110,15 +112,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
             super.onDraw(canvas);
 
-            int difference = getHeight() / 14;
-
             for (int i = 0; i < sTriangles.length; i++) {
                 Bitmap bitmapST = sTriangles[i].bitmap;
                 sTriangles[i].locX = getWidth() / 10 * sTriangles[i].randomX;
                 sTriangles[i].locY = getHeight() / 30 * sTriangles[i].randomY;
 
                 if (sTriangles[i].locY > getHeight() / 2) {
-                    sTriangles[i].locY -= difference;
+                    sTriangles[i].locY -= getHeight() / 2;
                 }
 
                 Rect sTDstRect = new Rect((int) (sTriangles[i].locX - sTriangles[i].radius), (int) (sTriangles[i].locY - sTriangles[i].radius), (int) (sTriangles[i].locX + sTriangles[i].radius), (int) (sTriangles[i].locY + sTriangles[i].radius));
@@ -132,7 +132,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
                 if (hTriangles[j].locY > getHeight() / 2) {
-                    hTriangles[j].locY -= difference;
+                    hTriangles[j].locY -= getHeight() / 2;
                 }
                 Rect hTDstRect = new Rect((int) (hTriangles[j].locX - hTriangles[j].radius), (int) (hTriangles[j].locY - hTriangles[j].radius), (int) (hTriangles[j].locX + hTriangles[j].radius), (int) (hTriangles[j].locY + hTriangles[j].radius));
                 canvas.drawBitmap(bitmapHT, null, hTDstRect, hTriangles[j].paint);
@@ -168,4 +168,25 @@ public class WelcomeActivity extends AppCompatActivity {
             hTriangles[j] = new WelcomeActivity.hTriangle();
         }
     }
+
+    Intent getIntent = getIntent();
+    String userName = getIntent.getStringExtra("userName");
+
+
+    public void onClickButtonTakePhoto(View view) {
+
+        Intent intentCamera = new Intent(this, CameraActivity.class);
+        intentCamera.putExtra("userName", userName);
+
+        startActivity(intentCamera);
+    }
+
+    public void onClickButtonGallery(View view) {
+
+        Intent intentGallery = new Intent(this, GalleryActivity.class);
+        intentGallery.putExtra("userName", userName);
+
+        startActivity(intentGallery);
+    }
+
 }
