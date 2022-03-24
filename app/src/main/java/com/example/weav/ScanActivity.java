@@ -77,7 +77,7 @@ public class ScanActivity extends AppCompatActivity {
 
             isReach();
             line.locY += line.vY;
-            canvas.drawLine(line.getlocX(), line.getlocY(), getWidth() - line.getlocX(), line.getlocY()+5, line.paint);
+            canvas.drawLine(line.getlocX(), line.getlocY(), getWidth() - line.getlocX(), line.getlocY()+10, line.paint);
 
             invalidate();
         }
