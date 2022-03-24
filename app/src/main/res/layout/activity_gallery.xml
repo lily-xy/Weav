@@ -122,7 +122,9 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/first_2" />
+                        android:tag="unChosen"
+                        android:onClick="changeImageState"
+                        android:src="@drawable/first_2"/>
 
                     <ImageView
                         android:layout_width="0dp"
