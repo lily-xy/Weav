@@ -11,6 +11,8 @@ import android.widget.ImageView;
 
 public class getFilenameActivity extends AppCompatActivity {
 
+    private EditText inputFileName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +67,14 @@ public class getFilenameActivity extends AppCompatActivity {
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
 
+        inputFileName =(EditText) findViewById(R.id.editTextTextFileName);
+        String fileName = inputFileName.getText().toString();
+
         Intent intent = new Intent(this, previewActivity.class);
         intent.putExtra("userName", userName);
+        intent.putExtra("fileName", fileName);
+
+        System.out.println("fileName: " + fileName.isEmpty());
 
         startActivity(intent);
     }
