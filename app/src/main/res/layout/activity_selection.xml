@@ -8,6 +8,50 @@
     android:id="@+id/selectionView"
     tools:context=".SelectionActivity">
 
+    <ImageView
+        android:id="@+id/birdImg1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:alpha="1"
+        android:onClick="changeBirdState"
+        android:tag="chosen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bird1" />
+
+    <ImageView
+        android:id="@+id/branch21"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="280dp"
+        android:alpha="1"
+        android:onClick="changeBranch2State"
+        android:tag="chosen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/branch2" />
+
+    <ImageView
+        android:id="@+id/branch11"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="270dp"
+        android:alpha="1"
+        android:onClick="changeBranch1State"
+        android:tag="chosen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/branch1" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,6 +112,7 @@ want to make" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="visible"
+                android:onClick="onClickButtonDeal"
                 app:srcCompat="@drawable/ok_w" />
 
         </LinearLayout>
@@ -76,49 +121,5 @@ want to make" />
             android:layout_height="0dp"
             android:layout_weight="1.2" />
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/birdImg1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:alpha="1"
-        android:tag="chosen"
-        android:onClick="changeBirdState"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bird1"/>
-
-    <ImageView
-        android:id="@+id/branch11"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="270dp"
-        android:alpha="1"
-        android:tag="chosen"
-        android:onClick="changeBranch1State"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/branch1" />
-
-    <ImageView
-        android:id="@+id/branch21"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginBottom="280dp"
-        android:alpha="1"
-        android:onClick="changeBranch2State"
-        android:tag="chosen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/branch2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

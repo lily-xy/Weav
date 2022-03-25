@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -94,6 +95,23 @@ public class SelectionActivity extends AppCompatActivity {
             img.setVisibility(View.VISIBLE);
         }else{
             img.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    public void onClickButtonDeal(View view) {
+
+        ImageView img = findViewById(R.id.birdImg1);
+        ImageView img2 = findViewById(R.id.branch11);
+        ImageView img3 = findViewById(R.id.branch21);
+
+        if(img.getTag().equals("chosen") && img2.getTag().equals("unChosen")  && img3.getTag().equals("unChosen")){
+            Intent getIntent = getIntent();
+            String userName = getIntent.getStringExtra("userName");
+
+            Intent intent = new Intent(this, DealActivity.class);
+            intent.putExtra("userName", userName);
+
+            startActivity(intent);
         }
     }
 }
