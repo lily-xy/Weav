@@ -59,4 +59,15 @@ public class getFilenameActivity extends AppCompatActivity {
             bt.setVisibility(View.INVISIBLE);
 
     }
+
+    public void onClickButtonPreview(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, previewActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
 }
