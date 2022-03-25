@@ -31,5 +31,14 @@ public class previewActivity extends AppCompatActivity {
         fileName.setText(name);
     }
 
+    public void onClickButtonWelcome(View view) {
 
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
 }
