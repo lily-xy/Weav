@@ -35,6 +35,17 @@ public class DealActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickButtonStyle(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, EffectActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
+
     public void onClickButtonGetFile(View view) {
 
         Intent getIntent = getIntent();
