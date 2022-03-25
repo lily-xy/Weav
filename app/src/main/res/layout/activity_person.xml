@@ -20,182 +20,176 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="180dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/f1_1"
+                        android:id="@+id/f1_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/f1_1_Img"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            app:srcCompat="@drawable/bird1" />
+
+                        <TextView
+                            android:id="@+id/f1_1_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="name"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/f1_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/f1_2_Img"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/hasky" />
+
+                        <TextView
+                            android:id="@+id/f1_2_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Hasky"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/f1_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/f1_3_Img"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/high_five" />
+
+                        <TextView
+                            android:id="@+id/f1_3_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="HighFive"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/f2_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/f1_1_Img"
+                        android:id="@+id/f2_1_Img"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="4"
-                        app:srcCompat="@drawable/bird1" />
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/sea" />
 
                     <TextView
-                        android:id="@+id/f1_1_Name"
+                        android:id="@+id/f2_1_Name"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="name" />
+                        android:text="sea"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
 
-            </LinearLayout>
 
+                </LinearLayout>
 
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/f1_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/f1_2_Img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    app:srcCompat="@drawable/hasky" />
-
-                <TextView
-                    android:id="@+id/f1_2_Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                <LinearLayout
+                    android:id="@+id/f2_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Hasky" />
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/f2_2_Img"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/cat" />
 
-            <LinearLayout
-                android:id="@+id/f1_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/f2_2_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="cat"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
 
-                <ImageView
-                    android:id="@+id/f1_3_Img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:src="@drawable/high_five" />
-
-                <TextView
-                    android:id="@+id/f1_3_Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="HighFive" />
+                    android:orientation="vertical">
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/f2_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/f2_1_Img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    app:srcCompat="@drawable/bird1" />
-
-                <TextView
-                    android:id="@+id/f2_1_Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="name" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/f2_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/f2_2_Img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    app:srcCompat="@drawable/hasky" />
-
-                <TextView
-                    android:id="@+id/f2_2_Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Hasky" />
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/f2_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/f2_3_Img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    app:srcCompat="@drawable/high_five" />
-
-                <TextView
-                    android:id="@+id/f2_3_Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="HighFive" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="horizontal">
-
-        </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>
