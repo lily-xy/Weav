@@ -46,6 +46,28 @@ public class DealActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickButtonColor(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, HueActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
+
+    public void onClickButtonDetail(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, DetailDataActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
+
     public void onClickButtonGetFile(View view) {
 
         Intent getIntent = getIntent();

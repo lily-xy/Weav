@@ -173,6 +173,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:onClick="onClickButtonColor"
                                 android:src="@drawable/button_3" />
 
                             <View
@@ -184,6 +185,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:onClick="onClickButtonDetail"
                                 android:src="@drawable/button_4" />
 
                         </LinearLayout>
