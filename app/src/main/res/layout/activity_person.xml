@@ -54,14 +54,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="4"
-                            app:srcCompat="@drawable/bird1" />
+                            app:srcCompat="@drawable/cat" />
 
                         <TextView
                             android:id="@+id/f1_1_Name"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="name"
+                            android:text="cat"
                             android:textAlignment="center"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -171,14 +171,14 @@
                             android:layout_height="0dp"
                             android:layout_weight="4"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/cat" />
+                            android:src="" />
 
                         <TextView
                             android:id="@+id/f2_2_Name"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="cat"
+                            android:text=""
                             android:textAlignment="center"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -230,6 +230,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onClickButtonWelcome"
                 app:srcCompat="@drawable/home_w" />
 
             <ImageView
@@ -237,6 +238,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onClickButtonMain"
                 android:src="@drawable/out_w" />
         </LinearLayout>
     </FrameLayout>
