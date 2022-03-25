@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/givefilename_bg"
+    android:id="@+id/previewPage"
     tools:context=".previewActivity">
 
     <LinearLayout
@@ -128,6 +129,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/createMold"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="8dp"
