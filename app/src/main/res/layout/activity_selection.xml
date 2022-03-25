@@ -67,7 +67,6 @@ want to make" />
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:alpha="1"
                 android:visibility="visible"
                 app:srcCompat="@drawable/ok_w" />
 

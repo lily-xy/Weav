@@ -22,7 +22,7 @@ public class ScanActivity extends AppCompatActivity {
 
     public class scanLine {
         int vX = 0;
-        int vY = 20;
+        int vY = 40;
         private float locX;
         private float locY;
 
@@ -56,6 +56,7 @@ public class ScanActivity extends AppCompatActivity {
     public class GraphicsView extends View {
 
         boolean reach = false;
+        ConstraintLayout root = findViewById(R.id.scanView);
 
         public GraphicsView(Context context) {
             super(context);
@@ -75,12 +76,11 @@ public class ScanActivity extends AppCompatActivity {
 
             isReach();
             if(line.getlocY() < 200){
-                jumpNext(this);
+                jumpNext(root);
             }
 
             line.locY += line.vY;
             line.setlocY(line.locY);
-            System.out.println(line.getlocY());
             canvas.drawLine(line.getlocX(), line.getlocY(), getWidth() - line.getlocX(), line.getlocY()+10, line.paint);
 
             invalidate();
@@ -112,6 +112,7 @@ public class ScanActivity extends AppCompatActivity {
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
 
+        System.out.println(this);
         Intent intent = new Intent(this, SelectionActivity.class);
         intent.putExtra("userName", userName);
 

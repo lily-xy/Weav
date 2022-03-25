@@ -75,7 +75,7 @@ public class GalleryActivity extends AppCompatActivity {
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
 
-        Intent intent = new Intent(this, SelectionActivity.class);
+        Intent intent = new Intent(this, ScanActivity.class);
         intent.putExtra("userName", userName);
 
         startActivity(intent);

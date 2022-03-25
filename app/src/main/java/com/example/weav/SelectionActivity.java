@@ -10,7 +10,6 @@ public class SelectionActivity extends AppCompatActivity {
     Boolean isBirdChosen = true;
     Boolean isBranch1 = true;
     Boolean isBranch2 = true;
-    ImageView bt = findViewById(R.id.selectBt);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +30,8 @@ public class SelectionActivity extends AppCompatActivity {
             img.setTag("unChosen");
             img.setAlpha(0.6f);
         }
+
+        ImageView bt = findViewById(R.id.selectBt);
         changeBtState(bt);
     }
 
@@ -47,6 +48,8 @@ public class SelectionActivity extends AppCompatActivity {
             img.setTag("unChosen");
             img.setAlpha(0.6f);
         }
+
+        ImageView bt = findViewById(R.id.selectBt);
         changeBtState(bt);
     }
 
@@ -64,12 +67,13 @@ public class SelectionActivity extends AppCompatActivity {
             img.setAlpha(0.6f);
         }
 
+        ImageView bt = findViewById(R.id.selectBt);
         changeBtState(bt);
     }
 
     public void changeBtState(View view) {
         ImageView img = findViewById(R.id.selectBt);
-        Boolean isChosen = true;
+        Boolean isChosen;
 
         if(isBirdChosen || isBranch1 || isBranch2){
             isChosen = true;
