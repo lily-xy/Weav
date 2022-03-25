@@ -34,4 +34,15 @@ public class succeedActivity extends AppCompatActivity {
 
             startActivity(intent);
     }
+
+    public void onClickButtonPerson(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, PersonActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
 }
