@@ -24,6 +24,17 @@ public class DealActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(uiOptions);
     }
 
+    public void onClickButtonContent(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
+    }
+
     public void onClickButtonGetFile(View view) {
 
         Intent getIntent = getIntent();
