@@ -35,6 +35,10 @@ public class ScanActivity extends AppCompatActivity {
             locY = 200;
         }
 
+        public void setvY(int vY) {
+            this.vY = vY;
+        }
+
         public float getlocX() {
             return locX;
         }
@@ -76,11 +80,13 @@ public class ScanActivity extends AppCompatActivity {
 
             isReach();
             if(line.getlocY() < 200){
+                line.setvY(0);
                 jumpNext(root);
             }
 
             line.locY += line.vY;
             line.setlocY(line.locY);
+            System.out.println(line.getlocY());
             canvas.drawLine(line.getlocX(), line.getlocY(), getWidth() - line.getlocX(), line.getlocY()+10, line.paint);
 
             invalidate();
@@ -112,7 +118,6 @@ public class ScanActivity extends AppCompatActivity {
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
 
-        System.out.println(this);
         Intent intent = new Intent(this, SelectionActivity.class);
         intent.putExtra("userName", userName);
 
