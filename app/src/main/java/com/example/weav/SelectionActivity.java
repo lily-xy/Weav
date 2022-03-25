@@ -1,6 +1,8 @@
 package com.example.weav;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +17,14 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        getWindow().getDecorView().setSystemUiVisibility(uiOptions);
     }
 
     public void changeBirdState(View view) {
@@ -46,7 +56,7 @@ public class SelectionActivity extends AppCompatActivity {
         } else {
             isBranch1 = false;
             img.setTag("unChosen");
-            img.setAlpha(0.6f);
+            img.setAlpha(0.4f);
         }
 
         ImageView bt = findViewById(R.id.selectBt);
@@ -64,7 +74,7 @@ public class SelectionActivity extends AppCompatActivity {
         } else {
             isBranch2 = false;
             img.setTag("unChosen");
-            img.setAlpha(0.6f);
+            img.setAlpha(0.4f);
         }
 
         ImageView bt = findViewById(R.id.selectBt);
