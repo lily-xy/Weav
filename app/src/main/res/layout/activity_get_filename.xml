@@ -44,6 +44,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
+                    android:onClick="onClickButtonDeal"
                     app:srcCompat="@drawable/back" />
 
                 <View
@@ -69,6 +70,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClickButtonWelcome"
                     app:srcCompat="@drawable/home" />
 
                 <View
@@ -106,7 +108,7 @@
             android:layout_weight="0.2" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/editTextTextFileName"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.8"
@@ -115,12 +117,27 @@
             android:ems="10"
             android:hint="input file name please"
             android:inputType="textPersonName"
+            android:onClick="onClickButtonEdit"
             android:textAlignment="center" />
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="2.5" />
+            android:layout_weight="0.4" />
+
+        <ImageView
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:onClick="onClickButtonDeal"
+            app:srcCompat="@drawable/okay" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.1" />
 
     </LinearLayout>
 
