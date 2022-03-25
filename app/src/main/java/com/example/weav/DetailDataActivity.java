@@ -32,4 +32,15 @@ public class DetailDataActivity extends AppCompatActivity {
             l2.setVisibility(View.VISIBLE);
         }
     }
+
+    public void onClickButtonDeal(View view) {
+
+            Intent getIntent = getIntent();
+            String userName = getIntent.getStringExtra("userName");
+
+            Intent intent = new Intent(this, DealActivity.class);
+            intent.putExtra("userName", userName);
+
+            startActivity(intent);
+    }
 }
