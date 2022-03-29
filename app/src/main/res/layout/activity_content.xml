@@ -155,7 +155,7 @@
                 </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView20"
+                android:id="@+id/imageMain"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4.5"
@@ -169,14 +169,14 @@
                 android:layout_weight="3">
 
                 <ImageView
-                    android:id="@+id/imageView21"
+                    android:id="@+id/bt1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/crop_chosen" />
 
                 <ImageView
-                    android:id="@+id/imageView23"
+                    android:id="@+id/bt2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -185,7 +185,7 @@
                     app:srcCompat="@drawable/eraser" />
 
                 <ImageView
-                    android:id="@+id/imageView24"
+                    android:id="@+id/bt3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
