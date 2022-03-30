@@ -31,20 +31,14 @@ public class ContentActivity extends AppCompatActivity {
         ImageView bt1 = findViewById(R.id.symmetric1);
         ImageView bt2 = findViewById(R.id.symmetric2);
 
-        if (img1.getTag() == "chosen"){
-            img1.setImageResource(R.drawable.crop);
-            img1.setTag("unChosen");
-        }
+        img1.setImageResource(R.drawable.crop);
+        img1.setTag("unChosen");
 
-        if (img2.getTag() == "chosen"){
-            img2.setImageResource(R.drawable.eraser);
-            img2.setTag("unChosen");
-        }
+        img2.setImageResource(R.drawable.eraser);
+        img2.setTag("unChosen");
 
-        if (img3.getTag() == "chosen"){
-            img3.setImageResource(R.drawable.draw);
-            img3.setTag("unChosen");
-        }
+        img3.setImageResource(R.drawable.draw);
+        img3.setTag("unChosen");
 
         bt1.setVisibility(View.VISIBLE);
         bt2.setVisibility(View.VISIBLE);
