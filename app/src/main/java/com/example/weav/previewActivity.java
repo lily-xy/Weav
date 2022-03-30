@@ -38,8 +38,10 @@ public class previewActivity extends AppCompatActivity {
 
         if(checkBox.getTag().equals("unChecked")){
             checkBox.setTag("checked");
+            checkBox.setImageResource(R.drawable.connected);
         }else{
             checkBox.setTag("unChecked");
+            checkBox.setImageResource(R.drawable.check);
         }
     }
 
