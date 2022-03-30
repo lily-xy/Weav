@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class PersonActivity extends AppCompatActivity {
 
@@ -16,6 +17,22 @@ public class PersonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person);
+
+        Intent getIntent = getIntent();
+        if(!getIntent.getStringExtra("message").isEmpty()){
+            String message = getIntent.getStringExtra("message");
+
+            if(message.equals("succeed")){
+                ImageView img = findViewById(R.id.f2_2_Img);
+                TextView t = findViewById(R.id.f2_2_Name);
+
+                img.setImageResource(R.drawable.bird_paint);
+
+                if(!getIntent.getStringExtra("fileName").isEmpty())
+                t.setText(getIntent.getStringExtra("fileName"));
+            }
+        }
+
     }
 
     public void onClickButtonWelcome(View view) {
