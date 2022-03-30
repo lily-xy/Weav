@@ -36,6 +36,7 @@ public class PersonActivity extends AppCompatActivity {
                 TextView t = findViewById(R.id.f2_2_Name);
 
                 img.setImageResource(R.drawable.bird_paint);
+                img.setVisibility(View.VISIBLE);
 
                 if(!getIntent.getStringExtra("fileName").isEmpty())
                 t.setText(getIntent.getStringExtra("fileName"));
