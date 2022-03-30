@@ -9,21 +9,6 @@
     tools:context=".SelectionActivity">
 
     <ImageView
-        android:id="@+id/birdImg1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:alpha="1"
-        android:onClick="changeBirdState"
-        android:tag="chosen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bird1" />
-
-    <ImageView
         android:id="@+id/branch21"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
@@ -51,6 +36,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/branch1" />
+
+    <ImageView
+        android:id="@+id/birdImg1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:alpha="1"
+        android:onClick="changeBirdState"
+        android:tag="chosen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bird1" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
