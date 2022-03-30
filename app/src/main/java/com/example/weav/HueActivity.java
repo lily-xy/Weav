@@ -38,12 +38,40 @@ public class HueActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showBlock(View view) {
+
+        View bg = findViewById(R.id.backgroundBlock);
+        LinearLayout block = findViewById(R.id.colorBlock);
+
+        if(bg.getTag().equals("invisible") && block.getTag().equals("invisible")){
+
+            bg.setTag("visible");
+            block.setTag("visible");
+
+            bg.setVisibility(View.VISIBLE);
+            block.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void hideBlock(View view) {
+
+        View bg = findViewById(R.id.backgroundBlock);
+        LinearLayout block = findViewById(R.id.colorBlock);
+
+        bg.setTag("invisible");
+        block.setTag("invisible");
+
+        bg.setVisibility(View.VISIBLE);
+        block.setVisibility(View.VISIBLE);
+    }
+
+
     public void showBar(View view) {
 
         LinearLayout l1 = findViewById(R.id.layout_levelBg);
         LinearLayout l2 = findViewById(R.id.layout_levelBt);
 
-        if(l1.getTag().equals("inVisible") && l2.getTag().equals("inVisible")){
+        if(l1.getTag().equals("invisible") && l2.getTag().equals("invisible")){
 
             l1.setTag("visible");
             l2.setTag("visible");
@@ -58,8 +86,8 @@ public class HueActivity extends AppCompatActivity {
         LinearLayout l1 = findViewById(R.id.layout_levelBg);
         LinearLayout l2 = findViewById(R.id.layout_levelBt);
 
-        l1.setTag("inVisible");
-        l2.setTag("inVisible");
+        l1.setTag("invisible");
+        l2.setTag("invisible");
 
         l1.setVisibility(View.VISIBLE);
         l2.setVisibility(View.VISIBLE);
