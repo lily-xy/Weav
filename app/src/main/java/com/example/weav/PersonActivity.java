@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 public class PersonActivity extends AppCompatActivity {
 
+    String message = "";
+    String fileName = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,22 +30,30 @@ public class PersonActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(uiOptions);
 
+        if(findViewById(R.id.succeed).getTag().equals("succeed")){
+            onClickAddFile(findViewById(R.id.personView));
+        }
+    }
+
+    public void onClickAddFile(View view) {
+
         Intent getIntent = getIntent();
-        if(!getIntent.getStringExtra("message").isEmpty()){
-            String message = getIntent.getStringExtra("message");
+        if(!getIntent.getStringExtra("message").isEmpty()) {
+            message = getIntent.getStringExtra("message");
 
             if(message.equals("succeed")){
                 ImageView img = findViewById(R.id.f2_2_Img);
                 TextView t = findViewById(R.id.f2_2_Name);
 
-                img.setImageResource(R.drawable.bird_paint);
+                img.setImageResource(R.drawable.first_2);
                 img.setVisibility(View.VISIBLE);
 
-                if(!getIntent.getStringExtra("fileName").isEmpty())
-                t.setText(getIntent.getStringExtra("fileName"));
+                if(!getIntent.getStringExtra("fileName").isEmpty()){
+                    fileName = getIntent.getStringExtra("fileName");
+                }
+                t.setText(fileName);
             }
         }
-
     }
 
     public void onClickButtonWelcome(View view) {

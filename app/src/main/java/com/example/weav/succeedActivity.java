@@ -22,6 +22,8 @@ public class succeedActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(uiOptions);
+
+        findViewById(R.id.succeed).setTag("succeed");
     }
 
     public void onClickButtonGallery(View view) {
@@ -45,7 +47,7 @@ public class succeedActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PersonActivity.class);
         intent.putExtra("userName", userName);
         intent.putExtra("fileName", fileName);
-        intent.putExtra("succeed", message);
+        intent.putExtra("message", message);
 
         startActivity(intent);
     }

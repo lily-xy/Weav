@@ -195,9 +195,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
+        String fileName = "";
+        String message = "";
 
         Intent intent = new Intent(this, PersonActivity.class);
         intent.putExtra("userName", userName);
+        intent.putExtra("fileName", fileName);
+        intent.putExtra("message", message);
 
         startActivity(intent);
     }
