@@ -81,7 +81,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    app:srcCompat="@drawable/okay_b" />
+                    app:srcCompat="@drawable/continue_purple" />
 
                 <View
                     android:layout_width="0dp"
@@ -173,7 +173,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/crop_chosen" />
+                    android:tag="chosen"
+                    android:src="@drawable/draw_chosen" />
 
                 <ImageView
                     android:id="@+id/bt2"
@@ -182,14 +183,16 @@
                     android:layout_weight="1"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
-                    app:srcCompat="@drawable/eraser" />
+                    android:tag="unChosen"
+                   android:src="@drawable/eraser" />
 
                 <ImageView
                     android:id="@+id/bt3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/draw" />
+                    android:tag="unChosen"
+                    android:src="@drawable/draw" />
 
             </LinearLayout>
 
