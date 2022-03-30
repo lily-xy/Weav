@@ -68,7 +68,6 @@ public class HueActivity extends AppCompatActivity {
             TextView t1 = findViewById(R.id.colorBlock1);
             TextView t2 = findViewById(R.id.colorBlock2);
 
-            t1.setVisibility(View.VISIBLE);
             t2.setVisibility(View.VISIBLE);
 
             if(bt.getTag().equals("B")){
