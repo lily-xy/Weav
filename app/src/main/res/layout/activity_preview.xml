@@ -151,7 +151,8 @@
                     android:text="create the 3D mold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:onClick="onClickButtonBuild"/>
 
             </androidx.cardview.widget.CardView>
 

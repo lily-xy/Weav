@@ -41,4 +41,17 @@ public class previewActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    public void onClickButtonBuild(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+        String fileName = getIntent.getStringExtra("fileName");
+
+        Intent intent = new Intent(this, buildingActivity.class);
+        intent.putExtra("userName", userName);
+        intent.putExtra("fileName", fileName);
+
+        startActivity(intent);
+    }
 }
