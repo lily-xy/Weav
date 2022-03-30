@@ -322,8 +322,7 @@
         android:alpha="0.75"
         android:background="@color/black"
         android:tag="inVisible"
-        android:visibility="invisible"
-        tools:visibility="visible" />
+        android:visibility="invisible" />
 
     <LinearLayout
         android:id="@+id/colorBlock"
@@ -332,8 +331,7 @@
         android:orientation="vertical"
         android:tag="inVisible"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="40dp"
-        tools:visibility="visible">
+        tools:layout_editor_absoluteX="40dp">
 
         <View
             android:layout_width="match_parent"
@@ -367,9 +365,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:tag="B"
                         android:onClick="onClickColorTypeChanged"
-                        android:src="@drawable/bibt" />
+                        android:src="@drawable/bibt"
+                        android:tag="B" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
@@ -380,23 +378,23 @@
                             android:id="@+id/state1_white"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:visibility="invisible"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/bicolorbar"
-                            android:visibility="invisible"/>
+                            app:srcCompat="@drawable/bicolorbar" />
 
 
                         <LinearLayout
                             android:id="@+id/state2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:visibility="visible"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:visibility="visible">
+                            app:layout_constraintTop_toTopOf="parent">
 
 
                             <ImageView
@@ -422,11 +420,11 @@
                             android:id="@+id/state3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:visibility="invisible"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:visibility="invisible">
+                            app:layout_constraintTop_toTopOf="parent">
 
 
                             <ImageView
