@@ -43,6 +43,7 @@
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
+                    android:onClick="onClickButtonDeal"
                     app:srcCompat="@drawable/back" />
 
                 <View
