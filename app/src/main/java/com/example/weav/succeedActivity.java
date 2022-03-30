@@ -39,9 +39,13 @@ public class succeedActivity extends AppCompatActivity {
 
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
+        String fileName = getIntent.getStringExtra("fileName");
+        String message = "succeed";
 
         Intent intent = new Intent(this, PersonActivity.class);
         intent.putExtra("userName", userName);
+        intent.putExtra("fileName", fileName);
+        intent.putExtra("succeed", message);
 
         startActivity(intent);
     }
