@@ -4,23 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/thirdColor"
     tools:context=".buildingActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="350dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/building" />
+        app:lottie_rawRes="@raw/building_ball" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
