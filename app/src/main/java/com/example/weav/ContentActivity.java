@@ -2,6 +2,7 @@ package com.example.weav;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -83,6 +84,17 @@ public class ContentActivity extends AppCompatActivity {
         imgMain.setImageResource(R.drawable.penbold);
         bt1.setImageResource(R.drawable.pen);
         bt2.setVisibility(View.INVISIBLE);
+    }
+
+    public void onClickButtonDeal(View view) {
+
+        Intent getIntent = getIntent();
+        String userName = getIntent.getStringExtra("userName");
+
+        Intent intent = new Intent(this, DealActivity.class);
+        intent.putExtra("userName", userName);
+
+        startActivity(intent);
     }
 
 }
