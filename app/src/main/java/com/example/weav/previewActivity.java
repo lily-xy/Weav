@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class previewActivity extends AppCompatActivity {
 
@@ -31,6 +33,16 @@ public class previewActivity extends AppCompatActivity {
         fileName.setText(name);
     }
 
+    public void onClickCheck(View view) {
+        ImageView checkBox = findViewById(R.id.checkbox);
+
+        if(checkBox.getTag().equals("unChecked")){
+            checkBox.setTag("checked");
+        }else{
+            checkBox.setTag("unChecked");
+        }
+    }
+
     public void onClickButtonWelcome(View view) {
 
         Intent getIntent = getIntent();
@@ -44,14 +56,21 @@ public class previewActivity extends AppCompatActivity {
 
     public void onClickButtonBuild(View view) {
 
-        Intent getIntent = getIntent();
-        String userName = getIntent.getStringExtra("userName");
-        String fileName = getIntent.getStringExtra("fileName");
+        ImageView checkBox = findViewById(R.id.checkbox);
 
-        Intent intent = new Intent(this, buildingActivity.class);
-        intent.putExtra("userName", userName);
-        intent.putExtra("fileName", fileName);
+        if(!checkBox.getTag().equals("checked")){
+            Toast.makeText(this, "Please check your 3D printer's connection first", Toast.LENGTH_LONG).show();
+        } else{
+            Intent getIntent = getIntent();
+            String userName = getIntent.getStringExtra("userName");
+            String fileName = getIntent.getStringExtra("fileName");
 
-        startActivity(intent);
+            Intent intent = new Intent(this, buildingActivity.class);
+            intent.putExtra("userName", userName);
+            intent.putExtra("fileName", fileName);
+
+            startActivity(intent);
+        }
+
     }
 }

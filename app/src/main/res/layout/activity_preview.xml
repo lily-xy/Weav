@@ -125,7 +125,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
@@ -185,12 +185,43 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="50dp"
+                    android:tag="unChecked"
+                    android:onClick="onClickCheck"
+                    android:src="@drawable/check" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="90dp"
+                    android:onClick="onClickCheck"
+                    android:text="Check the 3D printer's connection" />
+
+            </FrameLayout>
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.6"
             android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"/>
+            android:layout_marginEnd="40dp"
+            android:layout_weight="0.6" />
 
         <LinearLayout
             android:layout_width="wrap_content"
