@@ -225,7 +225,7 @@
                         android:gravity="center"
                         android:text="Craft"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/thirdColor"
                         android:textStyle="bold"
                         android:textSize="14sp" />
 
@@ -238,7 +238,7 @@
                         android:gravity="center"
                         android:text="Painting"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/thirdColor"
                         android:textStyle="bold"
                         android:textSize="14sp" />
 
@@ -251,7 +251,7 @@
                         android:gravity="center"
                         android:text="Other"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/thirdColor"
                         android:textStyle="bold"
                         android:textSize="14sp" />
                 </LinearLayout>
