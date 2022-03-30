@@ -174,7 +174,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:tag="chosen"
-                    android:src="@drawable/draw_chosen" />
+                    android:onClick="choseCrop"
+                    android:src="@drawable/crop_chosen" />
 
                 <ImageView
                     android:id="@+id/bt2"
@@ -184,6 +185,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:tag="unChosen"
+                    android:onClick="choseEraser"
                    android:src="@drawable/eraser" />
 
                 <ImageView
@@ -192,6 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:tag="unChosen"
+                    android:onClick="choseWrite"
                     android:src="@drawable/draw" />
 
             </LinearLayout>
