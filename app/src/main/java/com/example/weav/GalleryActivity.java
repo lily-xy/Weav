@@ -70,12 +70,12 @@ public class GalleryActivity extends AppCompatActivity {
 
     }
 
-    public void onClickButtonScan(View view) {
+    public void onClickButtonSelection(View view) {
 
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
 
-        Intent intent = new Intent(this, ScanActivity.class);
+        Intent intent = new Intent(this, SelectionActivity.class);
         intent.putExtra("userName", userName);
 
         startActivity(intent);
