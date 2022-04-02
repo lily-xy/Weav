@@ -37,7 +37,7 @@ public class succeedActivity extends AppCompatActivity {
             startActivity(intent);
     }
 
-    public void onClickButtonPerson(View view) {
+    public void onClickButtonSucceedToPerson(View view) {
 
         Intent getIntent = getIntent();
         String userName = getIntent.getStringExtra("userName");
