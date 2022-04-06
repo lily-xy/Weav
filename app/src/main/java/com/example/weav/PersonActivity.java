@@ -43,7 +43,7 @@ public class PersonActivity extends AppCompatActivity {
         if(!getIntent.getStringExtra("message").isEmpty()) {
             message = getIntent.getStringExtra("message");
 
-            if(message.equals("succeed")){
+            if(message.equals("succeed") || findViewById(R.id.f2_2).getTag().equals("succeed")){
                 ImageView img = findViewById(R.id.f2_2_Img);
                 TextView t = findViewById(R.id.f2_2_Name);
 
@@ -54,6 +54,8 @@ public class PersonActivity extends AppCompatActivity {
                     fileName = getIntent.getStringExtra("fileName");
                 }
                 t.setText(fileName);
+
+                findViewById(R.id.f2_2).setTag("succeed");
             }
         }
     }
