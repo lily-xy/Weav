@@ -7,13 +7,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class buildingActivity extends AppCompatActivity {
-
+    Handler h;
+    Runnable r = new Runnable() {
+        public void run() {
+            ConstraintLayout root = findViewById(R.id.previewPage);
+            goToSucceedPage(root);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +34,18 @@ public class buildingActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(uiOptions);
+        Log.i("MYTEST", "building activity");
 
-        Handler h = new Handler();
+        h = new Handler();
 
-        h.postDelayed(new Runnable() {
-            public void run() {
-                ConstraintLayout root = findViewById(R.id.previewPage);
-                goToSucceedPage(root);
-            }
-        }, 8000);
+        h.postDelayed(r, 8000);
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        h.removeCallbacksAndMessages(r);
+        super.onDestroy();
     }
 
     public void goToSucceedPage(View view) {

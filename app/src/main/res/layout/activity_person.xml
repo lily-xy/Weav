@@ -143,6 +143,8 @@
                             android:layout_height="0dp"
                             android:layout_weight="4"
                             android:scaleType="fitXY"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
                             app:srcCompat="@drawable/sea" />
 
                         <TextView
@@ -171,6 +173,8 @@
                             android:layout_height="0dp"
                             android:layout_weight="4"
                             android:scaleType="fitXY"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
                             android:src="@drawable/bird_paint"
                             android:visibility="invisible"/>
 

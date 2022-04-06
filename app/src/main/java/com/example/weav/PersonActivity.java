@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class PersonActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("MYTEST","creating person activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person);
 
@@ -30,9 +32,9 @@ public class PersonActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(uiOptions);
 
-        if(findViewById(R.id.succeed).getTag().equals("succeed")){
-            onClickAddFile(findViewById(R.id.personView));
-        }
+        Log.i("MYTEST","Doing onClickAddFile");
+        onClickAddFile(findViewById(R.id.personView));
+        Log.i("MYTEST","started person activity");
     }
 
     public void onClickAddFile(View view) {

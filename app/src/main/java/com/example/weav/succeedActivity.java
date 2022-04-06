@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -38,16 +39,20 @@ public class succeedActivity extends AppCompatActivity {
     }
 
     public void onClickButtonSucceedToPerson(View view) {
+        Log.i("MYTEST","Click button");
 
         Intent getIntent = getIntent();
-        String userName = getIntent.getStringExtra("userName");
-        String fileName = getIntent.getStringExtra("fileName");
-        String message = "succeed";
+        Intent intent = new Intent(this,PersonActivity.class);
 
-        Intent intent = new Intent(this, PersonActivity.class);
-        intent.putExtra("userName", userName);
-        intent.putExtra("fileName", fileName);
-        intent.putExtra("message", message);
+        if(!getIntent.getStringExtra("userName").isEmpty() && !getIntent.getStringExtra("fileName").isEmpty()){
+            String userName = getIntent.getStringExtra("userName");
+            String fileName = getIntent.getStringExtra("fileName");
+            String message = "succeed";
+
+            intent.putExtra("userName", userName);
+            intent.putExtra("fileName", fileName);
+            intent.putExtra("message", message);
+        }
 
         startActivity(intent);
     }
